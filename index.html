@@ -17,7 +17,6 @@
 
     <h3>Javascript Loops</h3>
     <p id="output"></p>
-    <p id="display"></p>
 
 
     <script>
@@ -25,8 +24,18 @@
 
         let scores = [60,77,38,19,59,47,23]
         for (let x = 0; x < scores.length; x++){
-            output.innerHTML
+            if ((scores[x] - 5) > 50){
+                output.innerHTML += 'Passed <br>'
+            }else{
+                if (((scores[x] + (scores[x] - 5))/2) > 50){
+                output.innerHTML += `You escape my punishment your initial score was ${scores[x]} 
+                and my manipulated score is ${((scores[x] + (scores[x] - 5))/2)}<br>`
+            } else{
+                output.innerHTML += 'You are grounded because you failed <br>'
+            }
         }
+    }
+    
 
 
     </script>
